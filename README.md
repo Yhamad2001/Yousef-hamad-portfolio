@@ -23,7 +23,7 @@ logistic regression, Tableau visualizes the risk landscape, and Excel delivers a
 live what-if scenario model.
 
 - [GitHub Repo](https://github.com/Yhamad2001/Customer-Churn-Revenue-Analysis)
-- [Live Tableau Dashboard](PASTE_TABLEAU_URL_HERE)
+- [Live Tableau Dashboard]((https://public.tableau.com/app/profile/yousef.hamad/viz/ChurnRiskDashboard/Dashboard1))
 
 **Key finding:** Reducing churn from 40% to 25% recovers $93,410 in annual revenue.
 
