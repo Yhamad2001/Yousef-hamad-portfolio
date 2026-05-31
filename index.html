@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Data Analyst portfolio — SQL, Python, Tableau, Excel. GMU Class of 2024." />
+  <title>Yousef Hamad | Data Analyst Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#0a0f1a; --bg2:#0f1624; --bg3:#141d2e;
+      --border:rgba(255,255,255,0.07);
+      --accent:#00c9a7; --accent2:#0097ff;
+      --text:#e2e8f0; --muted:#64748b; --dim:#94a3b8;
+      --card:#111827;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:0}
+
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,15,26,0.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav-inner{max-width:1120px;margin:0 auto;padding:0 2rem;height:62px;display:flex;align-items:center;justify-content:space-between}
+    .nav-logo{font-family:'Syne',sans-serif;font-weight:700;font-size:1rem;color:var(--text);letter-spacing:-0.01em}
+    .nav-logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:1.8rem;align-items:center}
+    .nav-links a{font-size:0.78rem;color:var(--muted);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-resume{font-size:0.78rem!important;padding:0.38rem 1rem;border:1px solid var(--accent)!important;border-radius:4px;color:var(--accent)!important;transition:all 0.2s!important;text-transform:none!important;letter-spacing:0!important}
+    .nav-resume:hover{background:rgba(0,201,167,0.1)!important}
+    @media(max-width:768px){.nav-links{display:none}}
+
+    /* HERO */
+    #hero{max-width:1120px;margin:0 auto;min-height:100vh;display:flex;align-items:center;padding:7rem 2rem 4rem;flex-wrap:wrap;gap:2rem;position:relative}
+    .hero-content{flex:1;max-width:640px}
+    .hero-tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.72rem;letter-spacing:0.14em;color:var(--accent);text-transform:uppercase;margin-bottom:1.4rem}
+    .hero-tag::before{content:'';width:24px;height:1px;background:var(--accent)}
+    .hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;color:#fff;line-height:1.0;letter-spacing:-0.03em;margin-bottom:1.2rem}
+    .hero-name .accent{color:var(--accent)}
+    .hero-sub{font-size:0.975rem;color:var(--dim);line-height:1.85;max-width:500px;margin-bottom:2.2rem}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+    .btn-primary{padding:0.7rem 1.6rem;border-radius:5px;background:var(--accent);color:#0a0f1a;font-size:0.875rem;font-weight:600;text-decoration:none;transition:all 0.2s;font-family:'DM Sans',sans-serif}
+    .btn-primary:hover{background:#00e0bb;transform:translateY(-1px)}
+    .btn-ghost{padding:0.7rem 1.6rem;border-radius:5px;border:1px solid var(--border);color:var(--dim);font-size:0.875rem;font-weight:400;text-decoration:none;transition:all 0.2s}
+    .btn-ghost:hover{border-color:var(--dim);color:var(--text)}
+    .hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:700;color:#fff;display:block;line-height:1}
+    .stat-lbl{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:0.3rem}
+    .hero-img{flex-shrink:0;display:flex;justify-content:center;align-items:center}
+    .hero-img-wrap{width:240px;height:240px;border-radius:50%;border:2px solid rgba(0,201,167,0.3);overflow:hidden;background:linear-gradient(135deg,#0f2040,#0a0f1a);display:flex;align-items:center;justify-content:center;position:relative}
+    .hero-img-wrap img{width:100%;height:100%;object-fit:cover}
+    .hero-placeholder{font-family:'Syne',sans-serif;font-size:0.72rem;color:var(--muted);text-align:center;padding:1rem;line-height:1.6}
+    .hero-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(0,201,167,0.1) 0%,transparent 70%);pointer-events:none;left:50%;top:50%;transform:translate(-50%,-50%)}
+    @media(max-width:900px){#hero{flex-direction:column;text-align:center}.hero-stats{justify-content:center}.hero-btns{justify-content:center}.hero-tag{justify-content:center}}
+
+    /* SECTIONS */
+    .section{max-width:1120px;margin:0 auto;padding:6rem 2rem}
+    .section-label{font-size:0.68rem;letter-spacing:0.16em;color:var(--accent);text-transform:uppercase;margin-bottom:0.5rem}
+    .section-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#fff;letter-spacing:-0.02em;margin-bottom:3rem}
+    .divider{border:none;border-top:1px solid var(--border)}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+    @media(max-width:768px){.about-grid{grid-template-columns:1fr}}
+    .about-text{font-size:0.95rem;color:var(--dim);line-height:1.85}
+    .about-text p{margin-bottom:1rem}
+    .meta-row{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;border-bottom:1px solid var(--border);font-size:0.875rem}
+    .meta-key{color:var(--muted)}.meta-val{color:var(--text);font-weight:500}
+
+    /* RESUME */
+    .resume-preview{margin-top:2rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:600px}
+    .resume-preview-placeholder{background:var(--card);padding:4rem 2rem;text-align:center;color:var(--muted);font-size:0.875rem}
+    .resume-link{display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.8rem;border-radius:5px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-size:0.875rem;font-weight:500;transition:all 0.2s;margin-top:0.5rem}
+    .resume-link:hover{background:rgba(0,201,167,0.1)}
+
+    /* PROJECTS */
+    .project-featured{background:var(--card);border:1px solid rgba(0,201,167,0.2);border-radius:12px;padding:2.2rem;margin-bottom:1.5rem;transition:border-color 0.2s;cursor:pointer}
+    .project-featured:hover{border-color:rgba(0,201,167,0.4)}
+    .project-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    @media(max-width:768px){.project-grid{grid-template-columns:1fr}}
+    .project-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.6rem;transition:border-color 0.2s,transform 0.2s;cursor:pointer}
+    .project-card:hover{border-color:rgba(0,153,255,0.3);transform:translateY(-2px)}
+    .project-badge{display:inline-block;font-size:0.63rem;padding:0.2rem 0.7rem;border-radius:999px;background:rgba(0,201,167,0.12);color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.8rem}
+    .project-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.6rem}
+    .project-desc{font-size:0.875rem;color:var(--muted);line-height:1.7;margin-bottom:1.2rem}
+    .highlights-list{list-style:none;margin:1.2rem 0}
+    .highlights-list li{font-size:0.85rem;color:var(--dim);padding:0.4rem 0 0.4rem 1.2rem;position:relative;line-height:1.6;border-bottom:1px solid var(--border)}
+    .highlights-list li:last-child{border-bottom:none}
+    .highlights-list li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+    .tag-list{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
+    .tag{font-size:0.68rem;padding:0.2rem 0.6rem;border-radius:4px;background:rgba(255,255,255,0.05);color:var(--dim)}
+    .project-links{display:flex;gap:0.8rem;margin-top:1.2rem;flex-wrap:wrap}
+    .proj-link{font-size:0.78rem;color:var(--accent);text-decoration:none;border:1px solid rgba(0,201,167,0.3);padding:0.3rem 0.8rem;border-radius:4px;transition:opacity 0.2s}
+    .proj-link:hover{opacity:0.75}
+    .proj-link.ghost{color:var(--dim);border-color:var(--border)}
+
+    /* SKILLS */
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem}
+    .skill-group{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.4rem}
+    .skill-group-title{font-size:0.67rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;font-weight:600}
+    .skill-item{font-size:0.875rem;color:var(--dim);padding:0.35rem 0;border-bottom:1px solid var(--border)}
+    .skill-item:last-child{border-bottom:none}
+
+    /* EXPERIENCE */
+    .exp-list{display:flex;flex-direction:column;gap:1.2rem}
+    .exp-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.8rem;transition:border-color 0.2s}
+    .exp-card:hover{border-color:rgba(0,153,255,0.2)}
+    .exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.2rem;flex-wrap:wrap;gap:0.5rem}
+    .exp-title{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#fff}
+    .exp-date{font-size:0.75rem;color:var(--muted);white-space:nowrap}
+    .exp-company{font-size:0.875rem;color:var(--accent2);margin-bottom:1rem}
+    .exp-bullets{list-style:none}
+    .exp-bullets li{font-size:0.875rem;color:var(--muted);padding:0.3rem 0 0.3rem 1.2rem;position:relative;line-height:1.65;border-bottom:1px solid var(--border)}
+    .exp-bullets li:last-child{border-bottom:none}
+    .exp-bullets li::before{content:"→";position:absolute;left:0;color:var(--accent2)}
+
+    /* CONTACT */
+    .contact-inner{max-width:560px}
+    .contact-inner p{font-size:0.95rem;color:var(--dim);line-height:1.8;margin-bottom:2rem}
+    .contact-links{display:flex;gap:1rem;flex-wrap:wrap}
+
+    footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:0.8rem;color:var(--muted)}
+
+    /* MODAL */
+    .modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:1.5rem}
+    .modal-overlay.open{display:flex}
+    .modal{background:var(--bg2);border:1px solid var(--border);border-radius:14px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;padding:2rem}
+    .modal-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.2rem}
+    .modal-title{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:#fff}
+    .modal-close{background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer;padding:0 0.3rem}
+    .modal-close:hover{color:#fff}
+    .modal-desc{font-size:0.9rem;color:var(--dim);line-height:1.75;margin-bottom:1.2rem}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-logo">Yousef<span>.</span></span>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" class="nav-resume">Resume ↗</a>
+    </div>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Data Analyst · GMU · Class of 2024</div>
+    <h1 class="hero-name">Hi, I'm<br><span class="accent">Yousef.</span></h1>
+    <p class="hero-sub">
+      Data Analyst with 3+ years turning operational and client data into decisions.
+      I build end-to-end analytics pipelines — SQL databases, Python models,
+      Tableau dashboards, and Excel scenario tools that give leadership a number to act on.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="https://www.linkedin.com/in/yousef-hamad/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat-num">3+</span><span class="stat-lbl">Years Exp.</span></div>
+      <div><span class="stat-num">2</span><span class="stat-lbl">Projects</span></div>
+      <div><span class="stat-num">2</span><span class="stat-lbl">Degrees</span></div>
+      <div><span class="stat-num">1</span><span class="stat-lbl">Cert</span></div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <div style="position:relative;">
+      <div class="hero-glow"></div>
+      <div class="hero-img-wrap">
+        <!-- To add your photo: save it as headshot.jpg and upload to your GitHub repo, then replace the div below with: <img src="headshot.jpg" alt="Yousef Hamad" /> -->
+        <div class="hero-placeholder">Upload headshot.jpg<br>to your repo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="about" class="section">
+  <div class="section-label">01 — About</div>
+  <h2 class="section-title">About Me</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a Data Analyst with a B.S. in Computational and Data Sciences from George Mason University (December 2024) and an A.S. in Computer Science from NOVA. My work sits at the intersection of operational analytics and business intelligence — taking messy, scattered data and building the infrastructure to make it useful.</p>
+      <p>At ICF International, I supported federal government analytics engagements using Python, SQL, and Tableau to clean and analyze large client datasets, build KPI reporting tools, and deliver EDA findings that improved reporting efficiency by 5%. At Abe's Transportation, I built a predictive analytics system for shuttle demand forecasting that cut wait times by 15%.</p>
+      <p>I'm driven by the moment a clean dashboard or a well-structured query turns a vague business question into a decision someone can act on immediately.</p>
+    </div>
+    <div>
+      <div class="meta-row"><span class="meta-key">University</span><span class="meta-val">George Mason University</span></div>
+      <div class="meta-row"><span class="meta-key">Degree</span><span class="meta-val">B.S. Computational & Data Sciences</span></div>
+      <div class="meta-row"><span class="meta-key">Graduated</span><span class="meta-val">December 2024</span></div>
+      <div class="meta-row"><span class="meta-key">Location</span><span class="meta-val">Bladensburg, MD</span></div>
+      <div class="meta-row"><span class="meta-key">Certification</span><span class="meta-val">AWS Certified Cloud Practitioner</span></div>
+      <div class="meta-row"><span class="meta-key">Status</span><span class="meta-val">Open to opportunities</span></div>
+      <div class="meta-row"><span class="meta-key">Citizenship</span><span class="meta-val">U.S. Citizen</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="resume" class="section">
+  <div class="section-label">02 — Resume</div>
+  <h2 class="section-title">Resume</h2>
+  <a href="resume.pdf" target="_blank" class="resume-link">Download PDF ↗</a>
+  <div class="resume-preview">
+    <!-- Replace with: <img src="resume-preview.png" alt="Resume" style="width:100%;display:block;" /> once you upload the image -->
+    <div class="resume-preview-placeholder">Upload resume-preview.png to your repo to display a preview here</div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="projects" class="section">
+  <div class="section-label">03 — Projects</div>
+  <h2 class="section-title">Projects</h2>
+
+  <div class="project-featured" onclick="openModal('modal-churn')">
+    <span class="project-badge">Featured Project</span>
+    <div class="project-title">Customer Churn & Revenue Risk Analysis</div>
+    <p class="project-desc">A complete end-to-end churn analytics pipeline covering 20 accounts and $46,705 in active MRR. SQL models risk from behavioral data, Python assigns individual churn probability scores via logistic regression, Tableau visualizes the risk landscape, and Excel gives leadership a live scenario model showing the dollar impact of reducing churn.</p>
+    <ul class="highlights-list">
+      <li>Designed a 4-table MySQL schema and authored 15+ SQL queries to calculate churn rates by segment, build a composite health score, and classify all accounts as CRITICAL, HIGH, MEDIUM, or LOW risk</li>
+      <li>Trained a logistic regression model in Python using 7 behavioral features — achieving clean separation between churned accounts (avg probability 0.945) and active accounts (avg 0.028)</li>
+      <li>Developed a 4-sheet Tableau dashboard with a revenue heatmap, customer health scatter plot sized by MRR, and usage trend line — revealing churned customers averaged 6x lower engagement</li>
+      <li>Built an Excel executive summary with a live what-if model: reducing churn from 40% to 25% recovers $93,410 in annual revenue</li>
+    </ul>
+    <div class="tag-list">
+      <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Python</span>
+      <span class="tag">scikit-learn</span><span class="tag">Tableau</span><span class="tag">Excel</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
+      <a href="PASTE_TABLEAU_URL_HERE" target="_blank" class="proj-link" onclick="event.stopPropagation()">Live Dashboard ↗</a>
+      <span class="proj-link ghost" onclick="event.stopPropagation();openModal('modal-churn')">View Details</span>
+    </div>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-card" onclick="openModal('modal-workforce')">
+      <span class="project-badge">Personal Project</span>
+      <div class="project-title">Workforce Operations & KPI Analysis</div>
+      <p class="project-desc">Normalized MySQL database modeling 5 departments and 15 employees, paired with a 6-tab Excel KPI dashboard surfacing attendance flags, overtime costs, and Q1 vs Q2 performance score trends.</p>
+      <div class="tag-list">
+        <span class="tag">SQL</span><span class="tag">MySQL</span>
+        <span class="tag">Excel</span><span class="tag">KPI Dashboards</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
+        <span class="proj-link ghost">Details</span>
+      </div>
+    </div>
+    <div class="project-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-style:dashed;cursor:default;">
+      <div style="font-size:2rem;color:var(--muted);margin-bottom:0.8rem;">+</div>
+      <div style="font-size:0.875rem;color:var(--muted);">More projects coming soon</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="skills" class="section">
+  <div class="section-label">04 — Skills</div>
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-item">SQL</div>
+      <div class="skill-item">Python</div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">BI & Visualization</div>
+      <div class="skill-item">Tableau</div>
+      <div class="skill-item">Power BI</div>
+      <div class="skill-item">Excel (Advanced)</div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Cloud</div>
+      <div class="skill-item">AWS (Certified)</div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Analytics</div>
+      <div class="skill-item">KPI Definition</div>
+      <div class="skill-item">Predictive Modeling</div>
+      <div class="skill-item">Dashboard Development</div>
+      <div class="skill-item">EDA & Trend Analysis</div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Process</div>
+      <div class="skill-item">Agile / Scrum</div>
+      <div class="skill-item">Requirements Gathering</div>
+      <div class="skill-item">Cross-Functional Collab</div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Tools</div>
+      <div class="skill-item">Microsoft Office Suite</div>
+      <div class="skill-item">Secure Data Handling</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="experience" class="section">
+  <div class="section-label">05 — Experience</div>
+  <h2 class="section-title">Experience</h2>
+  <div class="exp-list">
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Operations Coordinator</div>
+        <div class="exp-date">Mar 2025 – Present</div>
+      </div>
+      <div class="exp-company">Advantage Wrecker and Roadside Assistance · Bladensburg, MD</div>
+      <ul class="exp-bullets">
+        <li>Performed trend analysis and operational performance monitoring using transactional data, contributing to an 18% reduction in average response time.</li>
+        <li>Translated management requirements into data-driven process improvements, reducing scheduling conflicts and idle time by 10%.</li>
+        <li>Developed and maintained Excel-based KPI dashboards for response time, job completion, and downtime — improving fleet utilization by 12%.</li>
+        <li>Collaborated with drivers, supervisors, and leadership to align operational metrics with business objectives.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Data Analyst Intern</div>
+        <div class="exp-date">Jun 2024 – Aug 2024</div>
+      </div>
+      <div class="exp-company">ICF International · Reston, VA</div>
+      <ul class="exp-bullets">
+        <li>Used Python, SQL, and Excel to clean, validate, and analyze large federal client datasets, improving data accuracy by 7% and supporting data-driven decision-making across project teams.</li>
+        <li>Developed interactive Tableau dashboards and KPI reporting tools, reducing manual reporting time by 9% and enhancing stakeholder visibility into project outcomes.</li>
+        <li>Conducted EDA and trend analysis on client datasets, delivering actionable insights that contributed to process improvements and increased reporting efficiency by 5%.</li>
+      </ul>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-header">
+        <div class="exp-title">Transportation Operations Analyst</div>
+        <div class="exp-date">Aug 2021 – May 2024</div>
+      </div>
+      <div class="exp-company">Abe's Transportation · Washington, D.C.</div>
+      <ul class="exp-bullets">
+        <li>Optimized transportation logistics using Python and Tableau, reducing fuel costs by 10% and increasing shuttle availability during peak hours by 20%.</li>
+        <li>Implemented a predictive analytics system for overnight shuttle demand forecasting, increasing capacity by 10% and reducing wait times by 15%.</li>
+        <li>Created Tableau dashboards to monitor operational KPIs and support data-driven decision-making aligned with organizational goals.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider" />
+
+<section id="contact" class="section">
+  <div class="section-label">06 — Contact</div>
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="contact-inner">
+    <p>Open to full-time data analyst roles, internships, and conversations about analytics engineering, BI tooling, or operational data strategy.</p>
+    <div class="contact-links">
+      <a href="mailto:Yousef.hamad5655@hotmail.com" class="btn-primary">Send Email</a>
+      <a href="https://github.com/Yhamad2001" target="_blank" class="btn-ghost">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/yousef-hamad/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>© Yousef Hamad &nbsp;·&nbsp; Built with HTML · CSS · ❤</footer>
+
+<!-- MODAL: Churn -->
+<div class="modal-overlay" id="modal-churn" onclick="closeOnOverlay(event,'modal-churn')">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Customer Churn & Revenue Risk Analysis</div>
+      <button class="modal-close" onclick="closeModal('modal-churn')">✕</button>
+    </div>
+    <p class="modal-desc">End-to-end churn analytics pipeline covering 20 customers and $46,705 in active MRR. Every layer answers a specific business question — which customers are at risk, how much revenue is exposed, and what reducing churn is worth in dollars.</p>
+    <ul class="highlights-list">
+      <li>4-table MySQL schema: customers, subscriptions, support tickets, product usage</li>
+      <li>15+ SQL queries — churn rates by segment, composite health score, CRITICAL/HIGH/MEDIUM/LOW risk classification</li>
+      <li>Logistic regression in Python: 7 behavioral features, churned avg 0.945 vs active avg 0.028</li>
+      <li>4-sheet Tableau dashboard with filter actions — revenue heatmap, customer health scatter, usage trend</li>
+      <li>Excel what-if model: 40%→25% churn reduction = $93,410 annual revenue recovery</li>
+    </ul>
+    <div class="tag-list">
+      <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Python</span>
+      <span class="tag">scikit-learn</span><span class="tag">Tableau</span><span class="tag">Excel</span>
+    </div>
+    <br>
+    <div style="display:flex;gap:0.8rem;flex-wrap:wrap;">
+      <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link">GitHub Repo ↗</a>
+      <a href="PASTE_TABLEAU_URL_HERE" target="_blank" class="proj-link">Live Tableau Dashboard ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: Workforce -->
+<div class="modal-overlay" id="modal-workforce" onclick="closeOnOverlay(event,'modal-workforce')">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">Workforce Operations & KPI Analysis</div>
+      <button class="modal-close" onclick="closeModal('modal-workforce')">✕</button>
+    </div>
+    <p class="modal-desc">Normalized MySQL database and 6-tab Excel KPI dashboard built to model workforce performance across attendance, overtime, and quarterly reviews for 5 departments and 15 employees.</p>
+    <ul class="highlights-list">
+      <li>4-table schema: employees, attendance, overtime_log, performance_reviews</li>
+      <li>20+ SQL queries — payroll estimates, attendance flags, OT cost by dept, Q1 vs Q2 score deltas</li>
+      <li>Excel: 6-tab workbook with pivot tables, conditional formatting, and 6 embedded charts</li>
+      <li>Cross-joined OT and absence data to surface a burnout pattern in Logistics and Operations</li>
+      <li>Identified 18% attendance variance across regions</li>
+    </ul>
+    <div class="tag-list">
+      <span class="tag">SQL</span><span class="tag">MySQL</span>
+      <span class="tag">Excel</span><span class="tag">KPI Dashboards</span>
+    </div>
+    <br>
+    <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link">GitHub Repo ↗</a>
+  </div>
+</div>
+
+<script>
+  function openModal(id){document.getElementById(id).classList.add('open')}
+  function closeModal(id){document.getElementById(id).classList.remove('open')}
+  function closeOnOverlay(e,id){if(e.target===document.getElementById(id))closeModal(id)}
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.modal-overlay.open').forEach(m=>m.classList.remove('open'))})
+  const sections=document.querySelectorAll('section[id]')
+  const navLinks=document.querySelectorAll('.nav-links a[href^="#"]')
+  window.addEventListener('scroll',()=>{
+    let cur=''
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-100)cur=s.id})
+    navLinks.forEach(a=>{a.classList.remove('active');if(a.getAttribute('href')==='#'+cur)a.classList.add('active')})
+  })
+</script>
+</body>
+</html>
