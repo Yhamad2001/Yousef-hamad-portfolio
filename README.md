@@ -61,7 +61,7 @@ correlation between high overtime hours and increased absences.
 |---|---|---|
 | Operations Coordinator | Advantage Wrecker | Mar 2025 – Present |
 | Data Analyst Intern | ICF International | Jun 2024 – Aug 2024 |
-| Transportation Operations Analyst | Abe's Transportation | Aug 2021 – May 2024 |
+| Dispatcher | Abe's Transportation | Aug 2021 – May 2024 |
 
 ---
 
