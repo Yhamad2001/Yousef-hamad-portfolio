@@ -85,9 +85,9 @@
     .project-title{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.6rem}
     .project-desc{font-size:0.875rem;color:var(--muted);line-height:1.7;margin-bottom:1.2rem}
     .highlights-list{list-style:none;margin:1.2rem 0}
-    .highlights-list li{font-size:0.85rem;color:var(--dim);padding:0.4rem 0 0.4rem 1.2rem;position:relative;line-height:1.6;border-bottom:1px solid var(--border)}
+    .highlights-list li{font-size:0.85rem;color:var(--text);padding:0.4rem 0 0.4rem 1.2rem;position:relative;line-height:1.6;border-bottom:1px solid var(--border)}
     .highlights-list li:last-child{border-bottom:none}
-    .highlights-list li::before{content:"—";position:absolute;left:0;color:var(--accent)}
+    .highlights-list li::before{content:"▹";position:absolute;left:0;color:var(--accent)}
     .tag-list{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1rem}
     .tag{font-size:0.68rem;padding:0.2rem 0.6rem;border-radius:4px;background:rgba(255,255,255,0.05);color:var(--dim)}
     .project-links{display:flex;gap:0.8rem;margin-top:1.2rem;flex-wrap:wrap}
@@ -137,7 +137,7 @@
 
 <nav>
   <div class="nav-inner">
-    <span class="nav-logo">Yousef<span>.</span></span>
+    <span class="nav-logo">Yousef<span>Hamad</span></span>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
@@ -242,8 +242,8 @@
     </div>
   </div>
 
-  <div class="project-grid">
-    <div class="project-card" onclick="openModal('modal-workforce')">
+<div class="project-grid" style="grid-template-columns:1fr;">
+  <div class="project-card" onclick="openModal('modal-workforce')">
       <span class="project-badge">Personal Project</span>
       <div class="project-title">Workforce Operations & KPI Analysis</div>
       <p class="project-desc">Normalized MySQL database modeling 5 departments and 15 employees, paired with a 6-tab Excel KPI dashboard surfacing attendance flags, overtime costs, and Q1 vs Q2 performance score trends.</p>
@@ -255,10 +255,6 @@
         <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
         <span class="proj-link ghost">Details</span>
       </div>
-    </div>
-    <div class="project-card" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border-style:dashed;cursor:default;">
-      <div style="font-size:2rem;color:var(--muted);margin-bottom:0.8rem;">+</div>
-      <div style="font-size:0.875rem;color:var(--muted);">More projects coming soon</div>
     </div>
   </div>
 </section>
@@ -341,14 +337,14 @@
 
     <div class="exp-card">
       <div class="exp-header">
-        <div class="exp-title">Transportation Operations Analyst</div>
+        <div class="exp-title">Dispatcher</div>
         <div class="exp-date">Aug 2021 – May 2024</div>
       </div>
       <div class="exp-company">Abe's Transportation · Washington, D.C.</div>
       <ul class="exp-bullets">
-        <li>Optimized transportation logistics using Python and Tableau, reducing fuel costs by 10% and increasing shuttle availability during peak hours by 20%.</li>
-        <li>Implemented a predictive analytics system for overnight shuttle demand forecasting, increasing capacity by 10% and reducing wait times by 15%.</li>
-        <li>Created Tableau dashboards to monitor operational KPIs and support data-driven decision-making aligned with organizational goals.</li>
+        <li>Built Excel dashboards tracking route utilization, and on-time departure rates, presenting weekly KPI summaries to operations management.</li>
+        <li>Analyzed historical dispatch logs and ridership data to identify demand patterns, reducing scheduling conflicts by 15%.</li>
+        <li>Coordinated real-time data collection across multiple routes to monitor operational performance and support data-driven staffing decisions.</li>
       </ul>
     </div>
 
