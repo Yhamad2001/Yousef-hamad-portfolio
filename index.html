@@ -155,9 +155,9 @@
     <div class="hero-tag">Data Analyst · GMU · Class of 2024</div>
     <h1 class="hero-name">Hi, I'm<br><span class="accent">Yousef.</span></h1>
     <p class="hero-sub">
-      Data Analyst with 3+ years turning operational and client data into decisions.
-      I build end-to-end analytics pipelines — SQL databases, Python models,
-      Tableau dashboards, and Excel scenario tools that give leadership a number to act on.
+      Results-driven Data Analyst with 3+ years of experience in SQL, Python, Excel, and Tableau.
+      Skilled in transforming business requirements into actionable insights —
+      from KPI dashboards to predictive models that support data-driven decision-making.
     </p>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Projects</a>
@@ -189,7 +189,7 @@
   <div class="about-grid">
     <div class="about-text">
       <p>I'm a Data Analyst with a B.S. in Computational and Data Sciences from George Mason University (December 2024) and an A.S. in Computer Science from NOVA. My work sits at the intersection of operational analytics and business intelligence — taking messy, scattered data and building the infrastructure to make it useful.</p>
-      <p>At ICF International, I supported federal government analytics engagements using Python, SQL, and Tableau to clean and analyze large client datasets, build KPI reporting tools, and deliver EDA findings that improved reporting efficiency by 5%. At Abe's Transportation, I built a predictive analytics system for shuttle demand forecasting that cut wait times by 15%.</p>
+      <p>At ICF International, I supported federal government analytics engagements using Python, SQL, and Tableau to clean and analyze large client datasets, build KPI reporting tools, and deliver EDA findings that improved reporting efficiency by 5%. At Abe's Transportation, I analyzed historical dispatch logs and ridership data to identify demand patterns, built Excel dashboards tracking operational KPIs, and supported data-driven staffing decisions across multiple routes.</p>
       <p>I'm driven by the moment a clean dashboard or a well-structured query turns a vague business question into a decision someone can act on immediately.</p>
     </div>
     <div>
@@ -242,19 +242,24 @@
     </div>
   </div>
 
-<div class="project-grid" style="grid-template-columns:1fr;">
-  <div class="project-card" onclick="openModal('modal-workforce')">
-      <span class="project-badge">Personal Project</span>
-      <div class="project-title">Workforce Operations & KPI Analysis</div>
-      <p class="project-desc">Normalized MySQL database modeling 5 departments and 15 employees, paired with a 6-tab Excel KPI dashboard surfacing attendance flags, overtime costs, and Q1 vs Q2 performance score trends.</p>
-      <div class="tag-list">
-        <span class="tag">SQL</span><span class="tag">MySQL</span>
-        <span class="tag">Excel</span><span class="tag">KPI Dashboards</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link" onclick="event.stopPropagation()">GitHub ↗</a>
-        <span class="proj-link ghost">Details</span>
-      </div>
+<<div class="project-featured" onclick="openModal('modal-workforce')" style="border-color:rgba(0,153,255,0.2);">
+    <span class="project-badge" style="background:rgba(0,153,255,0.12);color:var(--accent2);">Personal Project</span>
+    <div class="project-title">Workforce Operations & KPI Analysis</div>
+    <p class="project-desc">A normalized MySQL database and 6-tab Excel KPI dashboard built to centralize workforce data across 5 departments and 15 employees. Covers attendance tracking, overtime cost analysis, and Q1 vs Q2 performance score trends — all surfaced through conditional formatting, pivot tables, and embedded charts designed for operational decision-making.</p>
+    <ul class="highlights-list">
+      <li>Designed a 4-table relational schema (employees, attendance, overtime, performance reviews) and populated it with 3 months of operational records across 5 departments and 15 employees</li>
+      <li>Authored 20+ SQL queries extracting KPIs including payroll estimates, attendance rate flags, Q1 vs Q2 performance score deltas, and overtime cost by department — surfacing an 18% attendance variance across regions</li>
+      <li>Built a 6-tab Excel dashboard with conditional formatting, pivot tables, and embedded charts — flagging employees below 80% attendance and identifying Logistics as the highest overtime cost department</li>
+      <li>Cross-joined overtime and absence data to identify a burnout pattern in Logistics and Operations, supporting a data-driven headcount rebalancing recommendation</li>
+    </ul>
+    <div class="tag-list">
+      <span class="tag">SQL</span><span class="tag">MySQL</span>
+      <span class="tag">Excel</span><span class="tag">KPI Dashboards</span>
+      <span class="tag">Data Modeling</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link" style="color:var(--accent2);border-color:rgba(0,153,255,0.3);" onclick="event.stopPropagation()">GitHub ↗</a>
+      <span class="proj-link ghost" onclick="event.stopPropagation();openModal('modal-workforce')">View Details</span>
     </div>
   </div>
 </section>
