@@ -6,7 +6,7 @@
 
 ## About
 
-Data Analyst with 3+ years of experience in SQL, Python, Tableau, and Excel.
+Business Analyst with 3+ years of experience in SQL, Python, Tableau, and Excel.
 B.S. Computational and Data Sciences — George Mason University, December 2024.
 AWS Certified Cloud Practitioner.
 
@@ -59,8 +59,8 @@ correlation between high overtime hours and increased absences.
 
 | Role | Company | Period |
 |---|---|---|
-| Operations Coordinator | Advantage Wrecker | Mar 2025 – Present |
-| Data Analyst Intern | ICF International | Jun 2024 – Aug 2024 |
+| Business Analyst | Peraton | July 2026 - Present |
+| Operations Coordinator | Advantage Wrecker | Mar 2025 – June 2026 |
 | Dispatcher | Abe's Transportation | Aug 2021 – May 2024 |
 
 ---
