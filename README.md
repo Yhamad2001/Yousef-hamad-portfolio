@@ -1,4 +1,4 @@
-# Yousef Hamad — Data Analyst Portfolio
+# Yousef Hamad — Business Analyst Portfolio
 
 **Live site:** [yhamad2001.github.io/Yousef-Hamad-Portfolio](https://Yhamad2001.github.io/Yousef-Hamad-Portfolio/)
 
