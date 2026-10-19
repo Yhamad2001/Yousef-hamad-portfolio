@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Data Analyst portfolio — SQL, Python, Tableau, Excel. GMU Class of 2024." />
+  <meta name="description" content="Business Analyst portfolio — SQL, Python, Tableau, Excel. GMU Class of 2024. Active Secret clearance." />
   <title>Yousef Hamad | Business Analyst Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
@@ -38,13 +38,15 @@
     .hero-tag::before{content:'';width:24px;height:1px;background:var(--accent)}
     .hero-name{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,6vw,4.5rem);font-weight:800;color:#fff;line-height:1.0;letter-spacing:-0.03em;margin-bottom:1.2rem}
     .hero-name .accent{color:var(--accent)}
-    .hero-sub{font-size:0.975rem;color:var(--dim);line-height:1.85;max-width:500px;margin-bottom:2.2rem}
+    .hero-sub{font-size:0.975rem;color:var(--dim);line-height:1.85;max-width:500px;margin-bottom:1.4rem}
+    .clearance-badge{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.75rem;font-weight:500;letter-spacing:0.04em;padding:0.4rem 0.9rem;border-radius:999px;border:1px solid rgba(0,201,167,0.35);background:rgba(0,201,167,0.08);color:var(--accent);margin-bottom:2.2rem}
+    .clearance-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent)}
     .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
     .btn-primary{padding:0.7rem 1.6rem;border-radius:5px;background:var(--accent);color:#0a0f1a;font-size:0.875rem;font-weight:600;text-decoration:none;transition:all 0.2s;font-family:'DM Sans',sans-serif}
     .btn-primary:hover{background:#00e0bb;transform:translateY(-1px)}
     .btn-ghost{padding:0.7rem 1.6rem;border-radius:5px;border:1px solid var(--border);color:var(--dim);font-size:0.875rem;font-weight:400;text-decoration:none;transition:all 0.2s}
     .btn-ghost:hover{border-color:var(--dim);color:var(--text)}
-    .hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--border)}
+    .hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid var(--border);flex-wrap:wrap}
     .stat-num{font-family:'Syne',sans-serif;font-size:2rem;font-weight:700;color:#fff;display:block;line-height:1}
     .stat-lbl{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-top:0.3rem}
     .hero-img{flex-shrink:0;display:flex;justify-content:center;align-items:center}
@@ -52,7 +54,7 @@
     .hero-img-wrap img{width:100%;height:100%;object-fit:cover}
     .hero-placeholder{font-family:'Syne',sans-serif;font-size:0.72rem;color:var(--muted);text-align:center;padding:1rem;line-height:1.6}
     .hero-glow{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(0,201,167,0.1) 0%,transparent 70%);pointer-events:none;left:50%;top:50%;transform:translate(-50%,-50%)}
-    @media(max-width:900px){#hero{flex-direction:column;text-align:center}.hero-stats{justify-content:center}.hero-btns{justify-content:center}.hero-tag{justify-content:center}}
+    @media(max-width:900px){#hero{flex-direction:column;text-align:center}.hero-sub{margin-left:auto;margin-right:auto}.hero-stats{justify-content:center}.hero-btns{justify-content:center}.hero-tag{justify-content:center}}
 
     /* SECTIONS */
     .section{max-width:1120px;margin:0 auto;padding:6rem 2rem}
@@ -66,7 +68,7 @@
     .about-text{font-size:0.95rem;color:var(--dim);line-height:1.85}
     .about-text p{margin-bottom:1rem}
     .meta-row{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 0;border-bottom:1px solid var(--border);font-size:0.875rem}
-    .meta-key{color:var(--muted)}.meta-val{color:var(--text);font-weight:500}
+    .meta-key{color:var(--muted)}.meta-val{color:var(--text);font-weight:500;text-align:right}
 
     /* RESUME */
     .resume-preview{margin-top:2rem;border:1px solid var(--border);border-radius:10px;overflow:hidden;max-width:600px}
@@ -159,6 +161,7 @@
       Skilled in transforming business requirements into actionable insights —
       from KPI dashboards to predictive models that support data-driven decision-making.
     </p>
+    <div class="clearance-badge">Active Secret Clearance · U.S. Citizen</div>
     <div class="hero-btns">
       <a href="#projects" class="btn-primary">View Projects</a>
       <a href="https://www.linkedin.com/in/yousef-hamad/" target="_blank" class="btn-ghost">LinkedIn ↗</a>
@@ -169,6 +172,7 @@
       <div><span class="stat-num">2</span><span class="stat-lbl">Projects</span></div>
       <div><span class="stat-num">2</span><span class="stat-lbl">Degrees</span></div>
       <div><span class="stat-num">1</span><span class="stat-lbl">Cert</span></div>
+      <div><span class="stat-num">Secret</span><span class="stat-lbl">Clearance</span></div>
     </div>
   </div>
   <div class="hero-img">
@@ -196,10 +200,12 @@
       <div class="meta-row"><span class="meta-key">University</span><span class="meta-val">George Mason University</span></div>
       <div class="meta-row"><span class="meta-key">Degree</span><span class="meta-val">B.S. Computational & Data Sciences</span></div>
       <div class="meta-row"><span class="meta-key">Graduated</span><span class="meta-val">December 2024</span></div>
+      <div class="meta-row"><span class="meta-key">Also</span><span class="meta-val">A.S. Computer Science, NOVA (June 2021)</span></div>
       <div class="meta-row"><span class="meta-key">Location</span><span class="meta-val">Falls Church, VA</span></div>
       <div class="meta-row"><span class="meta-key">Certification</span><span class="meta-val">AWS Certified Cloud Practitioner</span></div>
-      <div class="meta-row"><span class="meta-key">Status</span><span class="meta-val">Open to opportunities</span></div>
+      <div class="meta-row"><span class="meta-key">Security Clearance</span><span class="meta-val">Active Secret</span></div>
       <div class="meta-row"><span class="meta-key">Citizenship</span><span class="meta-val">U.S. Citizen</span></div>
+      <div class="meta-row"><span class="meta-key">Status</span><span class="meta-val">Open to opportunities</span></div>
     </div>
   </div>
 </section>
@@ -222,13 +228,13 @@
   <h2 class="section-title">Projects</h2>
 
   <div class="project-featured" onclick="openModal('modal-churn')">
-    <span class="project-badge">Featured Project</span>
+    <span class="project-badge">Featured Project · Personal Project</span>
     <div class="project-title">Customer Churn & Revenue Risk Analysis</div>
     <p class="project-desc">A complete end-to-end churn analytics pipeline covering 20 accounts and $46,705 in active MRR. SQL models risk from behavioral data, Python assigns individual churn probability scores via logistic regression, Tableau visualizes the risk landscape, and Excel gives leadership a live scenario model showing the dollar impact of reducing churn.</p>
     <ul class="highlights-list">
-      <li>Designed a 4-table MySQL schema and authored 15+ SQL queries to calculate churn rates by segment, build a composite health score, and classify all accounts as CRITICAL, HIGH, MEDIUM, or LOW risk</li>
+      <li>Designed a 4-table MySQL schema and authored 15+ SQL queries to calculate churn rates by segment, build a composite health score weighted across usage, satisfaction, and tenure, and classify all accounts as CRITICAL, HIGH, MEDIUM, or LOW risk</li>
       <li>Trained a logistic regression model in Python using 7 behavioral features — achieving clean separation between churned accounts (avg probability 0.945) and active accounts (avg 0.028)</li>
-      <li>Developed a 4-sheet Tableau dashboard with a revenue heatmap, customer health scatter plot sized by MRR, and usage trend line — revealing churned customers averaged 6x lower engagement</li>
+      <li>Developed a 4-sheet Tableau dashboard with a revenue heatmap, customer health scatter plot sized by MRR, and usage trend comparison — revealing churned customers averaged a 6x lower usage score than active customers before churn</li>
       <li>Built an Excel executive summary with a live what-if model: reducing churn from 40% to 25% recovers $93,410 in annual revenue</li>
     </ul>
     <div class="tag-list">
@@ -242,8 +248,8 @@
     </div>
   </div>
 
-<<div class="project-featured" onclick="openModal('modal-workforce')" style="border-color:rgba(0,153,255,0.2);">
-    <span class="project-badge" style="background:rgba(0,153,255,0.12);color:var(--accent2);">Personal Project</span>
+  <div class="project-featured" onclick="openModal('modal-workforce')" style="border-color:rgba(0,153,255,0.2);">
+    <span class="project-badge" style="background:rgba(0,153,255,0.12);color:var(--accent2);">Academic Project · George Mason University</span>
     <div class="project-title">Workforce Operations & KPI Analysis</div>
     <p class="project-desc">A normalized MySQL database and 6-tab Excel KPI dashboard built to centralize workforce data across 5 departments and 15 employees. Covers attendance tracking, overtime cost analysis, and Q1 vs Q2 performance score trends — all surfaced through conditional formatting, pivot tables, and embedded charts designed for operational decision-making.</p>
     <ul class="highlights-list">
@@ -279,16 +285,16 @@
       <div class="skill-group-title">BI & Visualization</div>
       <div class="skill-item">Tableau</div>
       <div class="skill-item">Power BI</div>
-      <div class="skill-item">Excel (Advanced)</div>
+      <div class="skill-item">Excel</div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Cloud</div>
-      <div class="skill-item">AWS (Certified)</div>
+      <div class="skill-item">AWS Certified Cloud Practitioner</div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Analytics</div>
       <div class="skill-item">KPI Definition</div>
-      <div class="skill-item">Predictive Modeling</div>
+      <div class="skill-item">Performance Metrics</div>
       <div class="skill-item">Dashboard Development</div>
       <div class="skill-item">EDA & Trend Analysis</div>
     </div>
@@ -296,12 +302,13 @@
       <div class="skill-group-title">Process</div>
       <div class="skill-item">Agile / Scrum</div>
       <div class="skill-item">Requirements Gathering</div>
-      <div class="skill-item">Cross-Functional Collab</div>
+      <div class="skill-item">Cross-Functional Collaboration</div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title">Tools</div>
-      <div class="skill-item">Microsoft Office Suite</div>
+      <div class="skill-group-title">Tools & Clearance</div>
+      <div class="skill-item">Microsoft Word, PowerPoint, Excel</div>
       <div class="skill-item">Secure Data Handling</div>
+      <div class="skill-item">Active Secret Clearance</div>
     </div>
   </div>
 </section>
@@ -312,27 +319,27 @@
   <div class="section-label">05 — Experience</div>
   <h2 class="section-title">Experience</h2>
   <div class="exp-list">
-    
+
     <div class="exp-card">
       <div class="exp-header">
         <div class="exp-title">Operations Coordinator</div>
-        <div class="exp-date">Mar 2025 – Present</div>
+        <div class="exp-date">March 2025 – Present</div>
       </div>
-      <div class="exp-company">Always Towing and Recovery · Washington, DC</div>
+      <div class="exp-company">Always Towing and Recovery · Washington, D.C.</div>
       <ul class="exp-bullets">
-        <li>Performed trend analysis and operational performance monitoring using transactional data, contributing to an 18% reduction in average response time.</li>
-        <li>Translated management requirements into data-driven process improvements, reducing scheduling conflicts and idle time by 10%.</li>
-        <li>Developed and maintained Excel-based KPI dashboards for response time, job completion, and downtime — improving fleet utilization by 12%.</li>
-        <li>Collaborated with drivers, supervisors, and leadership to align operational metrics with business objectives.</li>
+        <li>Performed trend analysis and operational performance monitoring using transactional and operational data, contributing to an 18% reduction in average response time.</li>
+        <li>Translated operational and management requirements into data-driven process improvements, reducing scheduling conflicts and idle time by 10%.</li>
+        <li>Developed and maintained Excel-based tracking reports and KPI dashboards for response time, job completion, and downtime metrics, improving fleet utilization by 12%.</li>
+        <li>Collaborated with drivers, supervisors, and leadership to support process improvement initiatives and align operational metrics with business objectives.</li>
       </ul>
     </div>
 
     <div class="exp-card">
       <div class="exp-header">
-        <div class="exp-title">Business Analyst</div>
+        <div class="exp-title">Data Analyst</div>
         <div class="exp-date">June 2024 – August 2024</div>
       </div>
-      <div class="exp-company">Peraton · Herndon, VA</div>
+      <div class="exp-company">ICF International · Fairfax, VA</div>
       <ul class="exp-bullets">
         <li>Leveraged Python, SQL, and Excel to clean, validate, and analyze large datasets, improving data accuracy by 7% and supporting data-driven decision-making across project teams.</li>
         <li>Developed interactive Tableau dashboards and KPI reporting tools to visualize performance metrics, reducing manual reporting time by 9% and enhancing stakeholder visibility into project outcomes.</li>
@@ -343,11 +350,11 @@
     <div class="exp-card">
       <div class="exp-header">
         <div class="exp-title">Dispatcher</div>
-        <div class="exp-date">Aug 2021 – May 2024</div>
+        <div class="exp-date">August 2021 – May 2024</div>
       </div>
       <div class="exp-company">Abe's Transportation · Washington, D.C.</div>
       <ul class="exp-bullets">
-        <li>Built Excel dashboards tracking route utilization, and on-time departure rates, presenting weekly KPI summaries to operations management.</li>
+        <li>Built Excel dashboards tracking route utilization and on-time departure rates, presenting weekly KPI summaries to operations management.</li>
         <li>Analyzed historical dispatch logs and ridership data to identify demand patterns, reducing scheduling conflicts by 15%.</li>
         <li>Coordinated real-time data collection across multiple routes to monitor operational performance and support data-driven staffing decisions.</li>
       </ul>
@@ -362,7 +369,7 @@
   <div class="section-label">06 — Contact</div>
   <h2 class="section-title">Get In Touch</h2>
   <div class="contact-inner">
-    <p>Open to full-time Business Analyst opportunities and conversations about business analysis, process improvement, Agile delivery, requirements gathering, and data-driven decision making.</p>
+    <p>Open to full-time Business Analyst opportunities and conversations about business analysis, process improvement, Agile delivery, requirements gathering, and data-driven decision making. U.S. Citizen with an active Secret clearance.</p>
     <div class="contact-links">
       <a href="mailto:Yousef.hamad5655@hotmail.com" class="btn-primary">Send Email</a>
       <a href="https://github.com/Yhamad2001" target="_blank" class="btn-ghost">GitHub ↗</a>
@@ -395,7 +402,7 @@
     <br>
     <div style="display:flex;gap:0.8rem;flex-wrap:wrap;">
       <a href="https://github.com/Yhamad2001" target="_blank" class="proj-link">GitHub Repo ↗</a>
-      <a href="PASTE_TABLEAU_URL_HERE" target="_blank" class="proj-link">Live Tableau Dashboard ↗</a>
+      <a href="https://public.tableau.com/app/profile/yousef.hamad/viz/ChurnRiskDashboard/Dashboard1" target="_blank" class="proj-link">Live Tableau Dashboard ↗</a>
     </div>
   </div>
 </div>
@@ -407,7 +414,7 @@
       <div class="modal-title">Workforce Operations & KPI Analysis</div>
       <button class="modal-close" onclick="closeModal('modal-workforce')">✕</button>
     </div>
-    <p class="modal-desc">Normalized MySQL database and 6-tab Excel KPI dashboard built to model workforce performance across attendance, overtime, and quarterly reviews for 5 departments and 15 employees.</p>
+    <p class="modal-desc">Normalized MySQL database and 6-tab Excel KPI dashboard built at George Mason University to model workforce performance across attendance, overtime, and quarterly reviews for 5 departments and 15 employees.</p>
     <ul class="highlights-list">
       <li>4-table schema: employees, attendance, overtime_log, performance_reviews</li>
       <li>20+ SQL queries — payroll estimates, attendance flags, OT cost by dept, Q1 vs Q2 score deltas</li>
